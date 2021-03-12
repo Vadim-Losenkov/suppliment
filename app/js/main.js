@@ -35,7 +35,7 @@ $(function() {
     changeTheme('[data-link="true"]')
   })
   
-  if ($(window).width() < 600) {
+  if (window.innerWidth < 600) {
     $('.facts__table-top').on('click', () => {
       $('.facts__list').slideToggle(300)
       $('.facts__table-arrow').toggleClass('open')
@@ -56,8 +56,9 @@ class Tabs {
   }
   
   listener() {
-    this.$menu.addEventListener('click', event => {
+    this.$menu.addEventListener('mouseover', event => {
       const $el = event.target.closest(`[data-id]`)
+      //console.log($el);
       const {id} = $el.dataset
       id ? this.opener(id) : null
     })

@@ -24,12 +24,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100px;
+    width: 130px;
   }
   &__theme-btn {
     background-image: url('../images/icons/moon.svg');
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -480,6 +480,7 @@
       justify-content: space-between;
       border-bottom: 1px solid  #ebebeb;
       transition: all .3s;
+      cursor: pointer;
       &.open {
         margin: 0 -25px;
         background-color: #fff;
@@ -696,6 +697,12 @@
       padding-bottom: 5px;
     }
   }
+  .question__form-name {
+    width: 260px;
+  }
+  .question__form-mail {
+    width: 260px;
+  }
   &__inner {
     max-width: 555px;
     margin: 0 auto;
@@ -706,9 +713,6 @@
     &-box {
       display: flex;
       justify-content: space-between;
-      input {
-        max-width: 260px;
-      }
     }
     &-subj {
       width: 100%;
