@@ -1,4 +1,4 @@
-@media (max-width: 1600px) {
+/*@media (max-width: 1600px) {
   .product__img {
     width: 60%;
   }
@@ -315,6 +315,16 @@
   }
   .facts__list {
     display: none;
+    &-item {
+      color: #999;
+      font-weight: 700;
+      padding: 5px 10px!important;
+    }
+    &-item.open {
+      color: #000;
+      padding: 7px 10px!important;
+      margin: 0;
+    }
   }
   .certification {
     padding: 50px 0 60px;
@@ -475,6 +485,9 @@
     padding-left: 10px;
     padding-right: 110px;
   }
+  .question__form-btn {
+    margin: 0;
+  }
 }
 
 @media (max-width: 410px) {
@@ -525,3 +538,4 @@
     display: none;
   }
 }
+*/

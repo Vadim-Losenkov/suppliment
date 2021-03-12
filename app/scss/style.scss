@@ -20,6 +20,20 @@
     height: 120px;
     position: relative;
   }
+  &-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+  }
+  &__theme-btn {
+    background-image: url('../images/icons/moon.svg');
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
   &__btn {
     margin-right: 20px;
     width: 40px;

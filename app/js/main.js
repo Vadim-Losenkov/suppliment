@@ -31,6 +31,9 @@ $(function() {
     $('.header__menu').slideToggle(300)
     $('.header__btn').toggleClass('open')
   })
+  $('.header__theme-btn').on('click', () => {
+    changeTheme('[data-link="true"]')
+  })
   
   if ($(window).width() < 600) {
     $('.facts__table-top').on('click', () => {
@@ -54,7 +57,8 @@ class Tabs {
   
   listener() {
     this.$menu.addEventListener('click', event => {
-      const {id} = event.target.dataset
+      const $el = event.target.closest(`[data-id]`)
+      const {id} = $el.dataset
       id ? this.opener(id) : null
     })
   }
@@ -76,3 +80,9 @@ class Tabs {
 }
 
 const tabs = new Tabs('[data-menu="menu"]', '[data-menu="items"]')
+
+function changeTheme($el, overlay) {
+  const $link = document.querySelector($el)
+  $link.classList.toggle('black')
+  $link.classList.contains('black') ? $link.href = 'css/black-theme.css' : $link.href = 'css/style.css'
+}
