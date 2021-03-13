@@ -1,4 +1,5 @@
 $(function() {
+  const $link = $('[data-link="true"]')
   $('.slider__inner').slick({
     dots: true,
     arrows: true,
@@ -32,7 +33,18 @@ $(function() {
     $('.header__btn').toggleClass('open')
   })
   $('.header__theme-btn').on('click', () => {
-    changeTheme('[data-link="true"]')
+    $link.toggleClass('black')
+    $link[0].classList.contains('black') ? $link[0].href = 'css/black-theme.css' : $link[0].href = 'css/style.css'
+    $('body').css({
+      opacity: 0,
+      transition: 'opacity 0.1s'
+    })
+    setTimeout(function() {
+      $('body').css({
+        opacity: 1,
+        transition: 'opacity 0.3s',
+      })
+    }, 300);
   })
   
   if (window.innerWidth < 600) {
@@ -58,7 +70,6 @@ class Tabs {
   listener() {
     this.$menu.addEventListener('mouseover', event => {
       const $el = event.target.closest(`[data-id]`)
-      //console.log($el);
       const {id} = $el.dataset
       id ? this.opener(id) : null
     })
@@ -81,9 +92,3 @@ class Tabs {
 }
 
 const tabs = new Tabs('[data-menu="menu"]', '[data-menu="items"]')
-
-function changeTheme($el, overlay) {
-  const $link = document.querySelector($el)
-  $link.classList.toggle('black')
-  $link.classList.contains('black') ? $link.href = 'css/black-theme.css' : $link.href = 'css/style.css'
-}

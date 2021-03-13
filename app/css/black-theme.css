@@ -1837,7 +1837,7 @@ body {
   }
 
   .sub__btn {
-    width: 100px;
+    width: 130px;
     height: 40px;
     font-size: 14px;
     line-height: 18px;
@@ -1850,7 +1850,7 @@ body {
     height: 40px;
     border-radius: 30px;
     padding-left: 10px;
-    padding-right: 110px;
+    padding-right: 140px;
   }
   .question__form-btn {
     margin: 0;
